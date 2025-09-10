@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    background-color: black;
+    color: aliceblue;
+    font-family: "Roboto", sans-serif;
+}
+
+.card {
+  background-color: rgba(2, 2, 2, 0.282); /* 👈 color para cada card */
+  padding: 1rem;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.264);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.283);
+  text-align: center;
+  cursor: pointer;
+}
+
+.card:hover{
+  box-shadow: 0 2px 8px rgb(255, 255, 255);
+
+}
+.card h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+}
+
+#cards {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  padding: 1.5rem; 
+}
+
+.center{
+    text-align: center;
+}

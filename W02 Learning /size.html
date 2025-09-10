@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Window Size Example</title>
+</head>
+<body>
+  <aside id="window-size"></aside>
+
+  <script>
+    function showWindowSize() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      document.getElementById("window-size").textContent =
+        `Current window size: ${width}px x ${height}px`;
+    }
+
+    // Mostrar al cargar la página
+    showWindowSize();
+
+    // Actualizar cuando la ventana cambie de tamaño
+    window.addEventListener("resize", showWindowSize);
+  </script>
+</body>
+</html>
