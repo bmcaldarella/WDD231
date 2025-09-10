@@ -1,0 +1,22 @@
+@media (min-width: 64rem){
+  /* Horizontal nav */
+  #menu{display:none}
+  .site-nav[hidden]{display:block}
+  .site-header{padding:1rem 0}
+  .site-nav{display:flex;gap:.75rem}
+  .site-nav a{background:#2b2b2b;color:#fff;padding:.5rem .75rem;margin:0}
+  .site-nav a:hover{background:#1b1b1b;text-decoration:none}
+
+  main{padding:1.25rem 0}
+
+  /* Two-column about layout (wireframe) */
+  .about-grid{
+    grid-template-columns: 2fr 1fr;
+    align-items:start;
+  }
+
+  /* Course items in three columns (wireframe look) */
+  .courses-grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
