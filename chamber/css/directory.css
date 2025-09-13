@@ -1,0 +1,35 @@
+
+@media (min-width:768px){
+
+  /* Quitar off-canvas y mostrar menú horizontal */
+  .nav{
+    position: static;
+    transform: none !important;
+    height: auto;
+    width: auto;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .nav-toggle{
+    display: none; /* ocultar hamburguesa */
+  }
+
+  .site-nav{
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    text-align: right;
+  }
+
+  .site-nav a{
+    padding: .5rem .75rem;
+  }
+
+  /* Tarjetas: grid de varias columnas en desktop */
+  .cards.grid{
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}

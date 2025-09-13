@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Rebel Coffee Roasters",
+    "address": "Oliver Plunkett St, Cork",
+    "phone": "+353 21 123 4567",
+    "website": "https://rebelcoffee.ie",
+    "image": "./images/members/rebels.webp",
+    "membership": 3,
+    "category": "Cafés & Restaurants"
+  },
+  {
+    "name": "Lee Tech Solutions",
+    "address": "South Mall, Cork",
+    "phone": "+353 21 765 4321",
+    "website": "https://leetech.ie",
+    "image": "./images/members/technology.webp",
+    "membership": 2,
+    "category": "Technology"
+  },
+  {
+    "name": "Cork Fit Gym",
+    "address": "Blackrock Rd, Cork",
+    "phone": "+353 21 555 1111",
+    "website": "https://corkfit.ie",
+    "image": "./images/members/gymn.webp",
+    "membership": 1,
+    "category": "Fitness"
+  },
+  {
+    "name": "Harbour View Hotel",
+    "address": "Custom House Quay, Cork",
+    "phone": "+353 21 555 2222",
+    "website": "https://harbourviewhotel.ie",
+    "image": "./images/members/hotel.webp",
+    "membership": 3,
+    "category": "Hospitality"
+  },
+  {
+    "name": "Shandon Legal",
+    "address": "Shandon St, Cork",
+    "phone": "+353 21 555 3333",
+    "website": "https://shandonlegal.ie",
+    "image": "./images/members/legal.webp",
+    "membership": 2,
+    "category": "Legal Services"
+  },
+  {
+    "name": "Green Market Organics",
+    "address": "English Market, Cork",
+    "phone": "+353 21 555 4444",
+    "website": "https://greenmarket.ie",
+    "image": "./images/members/market.webp",
+    "membership": 1,
+    "category": "Retail"
+  },
+  {
+    "name": "Atlantic Shipping Ltd",
+    "address": "Port of Cork, Ringaskiddy",
+    "phone": "+353 21 555 5555",
+    "website": "https://atlanticshipping.ie",
+    "image": "./images/members/shipping.webp",
+    "membership": 3,
+    "category": "Logistics"
+  }
+]
