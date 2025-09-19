@@ -1,35 +1,78 @@
+@media (min-width: 768px) {
 
-@media (min-width:768px){
-
-  /* Quitar off-canvas y mostrar menú horizontal */
-  .nav{
-    position: static;
+  /* ==== NAV: turn off off-canvas on desktop ==== */
+  .nav {
+    position: static !important;
     transform: none !important;
-    height: auto;
-    width: auto;
-    padding: 0;
-    background: transparent;
-    box-shadow: none;
+    height: auto !important;
+    width: auto !important;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
   }
+  .nav-toggle { display: none !important; }
 
-  .nav-toggle{
-    display: none; /* ocultar hamburguesa */
-  }
-
-  .site-nav{
-    flex-direction: row;
+  .site-nav {
+    flex-direction: row !important;
     align-items: center;
     justify-content: flex-end;
     gap: 1rem;
     text-align: right;
   }
+  .site-nav a { padding: .5rem .75rem; }
 
-  .site-nav a{
-    padding: .5rem .75rem;
+  /* ==== DIRECTORY: grid on desktop ==== */
+  .cards.grid {
+    display: grid; /* asegurar grid en desktop */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
   }
 
-  /* Tarjetas: grid de varias columnas en desktop */
-  .cards.grid{
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  /* ==== EVENTS: horizontal layout ==== */
+  .event-card {
+    flex-direction: row;
+    align-items: center;
+  }
+  .event-img {
+    width: 40%;
+    height: 100%;
+  }
+  .event-info {
+    width: 60%;
+    padding: 2rem;
+  }
+
+  /* ==== SPOTLIGHTS: cards in columns ==== */
+  .spotlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+
+  .spotlight-card {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.spotlights-title{
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #0b1224;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+
+
+@media (max-width: 480px) {
+  #spotlights-list {
+    gap: 1rem;
+  }
+  .spotlight-card img.spotlight-img {
+    height: 160px;
   }
 }
