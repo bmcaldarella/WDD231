@@ -152,6 +152,12 @@ a:visited {
   line-height: 1;
 
 }
+nav a[aria-current="page"] {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #ffffff;
+
+}
 
 
 .nav-toggle {
