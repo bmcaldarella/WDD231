@@ -417,7 +417,7 @@ nav a[aria-current="page"] {
   flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
-  background-color: rgba(1, 5, 17, 0.986);
+  background-color: rgb(6, 6, 6);
   padding-bottom: 3;
 
   width: 100%;
@@ -433,7 +433,11 @@ nav a[aria-current="page"] {
   color: white;
 
 }
-
+#current-temp{
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
 .weather .temp {
   font-weight: 700;
   font-size: 1.3rem;
@@ -458,7 +462,6 @@ nav a[aria-current="page"] {
   padding: 1rem;
   border-radius: 10px;
   border: 1px solid #f5f5f54b;
-  /* ← propiedad correcta */
   width: 90px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   color: white;
