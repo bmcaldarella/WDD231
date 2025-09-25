@@ -16,7 +16,7 @@
     flex-direction: row !important;
     align-items: center;
     justify-content: flex-end;
-    gap: 1rem;
+    gap: 2px;
     text-align: right;
   }
   .site-nav a { padding: .5rem .75rem; }
@@ -56,15 +56,6 @@
   }
 }
 
-.spotlights-title{
-  text-transform: uppercase;
-  font-size: 3.5rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-  color: #0b1224;
-  margin-bottom: 1rem;
-  text-align: center;
-}
 
 
 

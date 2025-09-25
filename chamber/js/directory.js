@@ -5,12 +5,11 @@ const toggle = document.getElementById("navToggle");
 const nav = document.getElementById("siteNav");
 
 if (toggle && nav) {
-  // Funciones para abrir/cerrar
   function openNav() {
     nav.classList.add("open");
     toggle.setAttribute("aria-expanded", "true");
     toggle.setAttribute("aria-label", "Close main menu");
-    document.body.style.overflow = "hidden"; // evita scroll cuando está abierto
+    document.body.style.overflow = "hidden"; 
   }
   function closeNav() {
     nav.classList.remove("open");
@@ -19,25 +18,19 @@ if (toggle && nav) {
     document.body.style.overflow = "";
   }
 
-  // Click en el botón hamburguesa
   toggle.addEventListener("click", () => {
     nav.classList.contains("open") ? closeNav() : openNav();
   });
 
-  // Cerrar al hacer click en cualquier link del menú
   nav.addEventListener("click", (e) => {
     if (e.target.tagName === "A") closeNav();
   });
 
-  // Mantener sincronizado al redimensionar la ventana
   const mq = window.matchMedia("(min-width: 768px)");
   const syncNav = () => {
     if (mq.matches) {
-      // Si estamos en desktop, el menú debe quedar cerrado
       closeNav();
     } else {
-      // Si volvemos a móvil, no forzamos la apertura
-      // pero aseguramos atributos coherentes si venimos de desktop
       if (!nav.classList.contains("open")) {
         toggle.setAttribute("aria-expanded", "false");
         toggle.setAttribute("aria-label", "Open main menu");
@@ -45,7 +38,7 @@ if (toggle && nav) {
     }
   };
   mq.addEventListener("change", syncNav);
-  syncNav(); // ejecutar una vez al cargar
+  syncNav(); 
 }
 
 // ===== Footer dinámico =====
@@ -128,7 +121,7 @@ function renderMembers(members) {
     const phoneLink = document.createElement("a");
     phoneLink.href = `tel:${String(m.phone || "").replace(/\s+/g, "")}`;
     phoneLink.textContent = m.phone;
-    phoneLink.style.color = "#000";
+    phoneLink.style.color = "#fdfdfdff";
     phone.appendChild(phoneLink);
     card.appendChild(phone);
 
@@ -277,6 +270,41 @@ function getRandomSample(arr, n = 3) {
   }
   return copy.slice(0, Math.min(n, copy.length));
 }
+
+
+
+
+
+
+//form 
+
+        // Timestamp on load (ISO for reliability across pages)
+        document.addEventListener('DOMContentLoaded', () => {
+            const ts = document.getElementById('timestamp');
+            if (ts) ts.value = new Date().toISOString();
+
+            // Open dialogs via buttons
+            document.querySelectorAll('button[data-dialog]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const id = btn.getAttribute('data-dialog');
+                    const dlg = document.getElementById(id);
+                    if (dlg && typeof dlg.showModal === 'function') dlg.showModal();
+                });
+            });
+
+            // Close dialog buttons
+            document.querySelectorAll('dialog [data-close]').forEach(btn => {
+                btn.addEventListener('click', () => btn.closest('dialog').close());
+            });
+
+            // Optional: block submit if invalid and show native report
+            document.getElementById('join-form').addEventListener('submit', function (e) {
+                if (!this.checkValidity()) {
+                    e.preventDefault();
+                    this.reportValidity();
+                }
+            });
+        });
 
 
 loadSpotlights({ limit: 3, random: true });

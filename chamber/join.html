@@ -1,11 +1,289 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cork Chamber of Commerce — Directory</title>
+    <meta name="description"
+    content="Directory of Cork Chamber of Commerce members: businesses, services, and organizations in Cork, Ireland." />
+    <meta name="author" content="Brandon Caldarella" />
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.ico" type="image/svg+xml" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cork Chamber of Commerce — Directory" />
+    <meta property="og:description"
+        content="Explore Cork businesses: addresses, phone numbers, websites, and membership levels." />
+    <meta property="og:image" content="https://bmcaldarella.github.io/wdd231/chamber/images/og-cover.png" />
+    <meta property="og:url" content="https://bmcaldarella.github.io/wdd231/chamber/directory.html" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/directory.css" />
+    <link rel="stylesheet" href="./css/form.css" />
 </head>
+
 <body>
-    <h1>In progress</h1>
+
+        <header class="site-header">
+        <div class="wrapper header-inner">
+            <div class="brand-wrap">
+                <a href="./index.html" class="brand">
+                    <img src="./images/chamberLogo.webp" alt="Cork Chamber logo" width="55" height=""
+                        decoding="async" />
+
+                </a>
+            </div>
+
+            <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="siteNav"
+                aria-label="Open main menu">
+                <!-- icono simple -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0,0,256,256" aria-hidden="true">
+                    <g fill="currentColor">
+                        <rect x="20" y="56" width="216" height="20" rx="10"></rect>
+                        <rect x="20" y="118" width="216" height="20" rx="10"></rect>
+                        <rect x="20" y="180" width="216" height="20" rx="10"></rect>
+                    </g>
+                </svg>
+            </button>
+
+            <nav id="siteNav" class="nav" aria-label="Main navigation">
+                <ul class="site-nav">
+                    <li class="nav-item"><a href="./index.html" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a href="./discover.html">Discover</a></li>
+                    <li class="nav-item"><a href="./directory.html" >Directory</a></li>
+                    <li class="nav-item"><a href="./join.html">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main class="container" id="main">
+        <!-- FORM LEFT -->
+        <section aria-labelledby="join-title">
+            <h1 id="join-title">Membership Application</h1>
+
+            <!-- GET → thankyou.html, all fields in <label> -->
+            <form method="get" action="thankyou.html" id="join-form" novalidate>
+                <fieldset>
+                    <legend>Applicant</legend>
+
+                    <label>
+                        Applicant's First Name *
+                        <input type="text" name="first_name" title="Applicant first name" autocomplete="given-name"
+                            required>
+                    </label>
+
+                    <label>
+                        Applicant's Last Name *
+                        <input type="text" name="last_name" title="Applicant last name" autocomplete="family-name"
+                            required>
+                    </label>
+
+                    <label>
+                        Organizational Title
+                        <input type="text" name="organization_title"
+                            title="Only letters, hyphens, and spaces; minimum 7 characters"
+                            autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}"
+                            placeholder="e.g., Senior Marketing-Lead">
+                    </label>
+
+                    <label>
+                        Email Address *
+                        <input type="email" name="email" title="Applicant email address" autocomplete="email"
+                            placeholder="name@example.com" required>
+                    </label>
+
+                    <label>
+                        Mobile Phone *
+                        <input type="tel" name="mobile_phone" title="Applicant mobile phone number" autocomplete="tel"
+                            required>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Organization</legend>
+
+                    <label>
+                        Business/Organization Name *
+                        <input type="text" name="organization_name" title="Business or organization name"
+                            autocomplete="organization" required>
+                    </label>
+
+                    <label>
+                        Membership Level *
+                        <select name="membership_level" title="Select a membership level" required>
+                            <option value="" disabled selected>Select a level…</option>
+                            <option value="np">NP Membership — Non-profit (no fee)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Business/Organization Description
+                        <textarea name="organization_description" title="Describe the business/organization" rows="5"
+                            placeholder="Brief description of your organization…"></textarea>
+                    </label>
+                </fieldset>
+
+                <!-- Hidden timestamp -->
+                <input type="hidden" name="timestamp" id="timestamp">
+
+                <input type="submit" value="Submit Application">
+            </form>
+        </section>
+
+        <!-- CARDS RIGHT (desktop) / BELOW (mobile) -->
+        <aside class="levels" aria-labelledby="levels-title">
+            <h2 id="levels-title" class="visually-hidden" style="position:absolute;left:-9999px;">Membership Levels</h2>
+
+            <article class="card" aria-labelledby="np-title">
+                <h3 id="np-title">NP Membership</h3>
+                <p>Non-profit organizations — <strong>No fee</strong>.</p>
+                <button type="button" data-dialog="dlg-np" aria-haspopup="dialog" aria-controls="dlg-np">View
+                    Benefits</button>
+            </article>
+
+            <article class="card" aria-labelledby="bronze-title">
+                <h3 id="bronze-title">Bronze Membership</h3>
+                <p>Great for small teams getting started.</p>
+                <button type="button" data-dialog="dlg-bronze" aria-haspopup="dialog" aria-controls="dlg-bronze">View
+                    Benefits</button>
+            </article>
+
+            <article class="card" aria-labelledby="silver-title">
+                <h3 id="silver-title">Silver Membership</h3>
+                <p>More exposure, more perks, better discounts.</p>
+                <button type="button" data-dialog="dlg-silver" aria-haspopup="dialog" aria-controls="dlg-silver">View
+                    Benefits</button>
+            </article>
+
+            <article class="card" aria-labelledby="gold-title">
+                <h3 id="gold-title">Gold Membership</h3>
+                <p>Maximum visibility and premium benefits.</p>
+                <button type="button" data-dialog="dlg-gold" aria-haspopup="dialog" aria-controls="dlg-gold">View
+                    Benefits</button>
+            </article>
+        </aside>
+    </main>
+
+
+    <!-- MODALS -->
+    <dialog id="dlg-np" aria-labelledby="np-h">
+        <header>
+            <h4 id="np-h">NP Membership Benefits</h4>
+            <button type="button" data-close aria-label="Close">✕</button>
+        </header>
+        <div class="dlg">
+            <ul>
+                <li>Access to community events</li>
+                <li>Volunteer spotlights</li>
+                <li>Training webinars (quarterly)</li>
+            </ul>
+        </div>
+    </dialog>
+
+    <dialog id="dlg-bronze" aria-labelledby="bronze-h">
+        <header>
+            <h4 id="bronze-h">Bronze Membership Benefits</h4>
+            <button type="button" data-close aria-label="Close">✕</button>
+        </header>
+        <div class="dlg">
+            <ul>
+                <li>All NP benefits</li>
+                <li>Event discounts (10%)</li>
+                <li>Directory badge</li>
+            </ul>
+        </div>
+    </dialog>
+
+    <dialog id="dlg-silver" aria-labelledby="silver-h">
+        <header>
+            <h4 id="silver-h">Silver Membership Benefits</h4>
+            <button type="button" data-close aria-label="Close">✕</button>
+        </header>
+        <div class="dlg">
+            <ul>
+                <li>All Bronze benefits</li>
+                <li>Homepage spotlight (1×/quarter)</li>
+                <li>Training bundle access</li>
+            </ul>
+        </div>
+    </dialog>
+
+    <dialog id="dlg-gold" aria-labelledby="gold-h">
+        <header>
+            <h4 id="gold-h">Gold Membership Benefits</h4>
+            <button type="button" data-close aria-label="Close">✕</button>
+        </header>
+        <div class="dlg">
+            <ul>
+                <li>All Silver benefits</li>
+                <li>Priority event placement</li>
+                <li>Custom promo campaign</li>
+            </ul>
+        </div>
+    </dialog>
+
+
+    <footer class="site-footer">
+        <div class="wrapper">
+            <address>
+                <strong>Cork Chamber of Commerce</strong><br>
+                123 Grand Parade, Cork, Ireland<br>
+
+            </address>
+            <div>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg
+                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="none" stroke-dashoffset="0"
+                            font-size="none" style="mix-blend-mode: normal">
+                            <g transform="scale(5.12,5.12)">
+                                <path
+                                    d="M16,3c-7.17,0 -13,5.83 -13,13v18c0,7.17 5.83,13 13,13h18c7.17,0 13,-5.83 13,-13v-18c0,-7.17 -5.83,-13 -13,-13zM37,11c1.1,0 2,0.9 2,2c0,1.1 -0.9,2 -2,2c-1.1,0 -2,-0.9 -2,-2c0,-1.1 0.9,-2 2,-2zM25,14c6.07,0 11,4.93 11,11c0,6.07 -4.93,11 -11,11c-6.07,0 -11,-4.93 -11,-11c0,-6.07 4.93,-11 11,-11zM25,16c-4.96,0 -9,4.04 -9,9c0,4.96 4.04,9 9,9c4.96,0 9,-4.04 9,-9c0,-4.96 -4.04,-9 -9,-9z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg></a>
+
+
+
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="linkedin"><svg
+                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="none" stroke-dashoffset="0"
+                            font-size="none" style="mix-blend-mode: normal">
+                            <g transform="scale(5.12,5.12)">
+                                <path
+                                    d="M41,4h-32c-2.76,0 -5,2.24 -5,5v32c0,2.76 2.24,5 5,5h32c2.76,0 5,-2.24 5,-5v-32c0,-2.76 -2.24,-5 -5,-5zM17,20v19h-6v-19zM11,14.47c0,-1.4 1.2,-2.47 3,-2.47c1.8,0 2.93,1.07 3,2.47c0,1.4 -1.12,2.53 -3,2.53c-1.8,0 -3,-1.13 -3,-2.53zM39,39h-6c0,0 0,-9.26 0,-10c0,-2 -1,-4 -3.5,-4.04h-0.08c-2.42,0 -3.42,2.06 -3.42,4.04c0,0.91 0,10 0,10h-6v-19h6v2.56c0,0 1.93,-2.56 5.81,-2.56c3.97,0 7.19,2.73 7.19,8.26z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg></a>
+
+            </div>
+            <p class="footer-meta">
+                © <span id="year" class="num-year">0000</span> |
+                Brandon Caldarella | WDD 231 |
+                <time id="lastModified" class="num-lm" datetime="1970-01-01T00:00:00Z">0000-00-00 00:00:00</time>
+            </p>
+
+        </div>
+    </footer>
+
+  <script defer src="./js/directory.js"></script>
+
 </body>
+
 </html>
+
+
+
+
+

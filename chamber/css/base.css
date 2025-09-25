@@ -6,7 +6,9 @@
 html,
 body {
   overflow-x: hidden;
-  font-family: Verdana, Geneva, Tahoma, sans-serif
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #000000;
+  color: #f5f5f5;
 }
 
 .wrapper>.hero-section,
@@ -32,14 +34,13 @@ a:visited {
 .btn-grid {
   width: 3.5rem;
   cursor: pointer;
-  background-color: transparent;
-  border: 0.4px solid rgba(0, 0, 0, 0.303);
-  margin: 7px;
+  border: 0.4px solid rgba(255, 255, 255, 0.303);
+  margin: 30px 2px  -30px;
   border-radius: 13px;
 }
 
 .btn-grid:focus {
-  background-color: #0b122422;
+  background-color: #b1a3a342;
 }
 
 /* Footer */
@@ -53,6 +54,7 @@ a:visited {
 .cards {
   display: grid;
   gap: 1rem;
+
 }
 
 .cards.grid {
@@ -64,9 +66,11 @@ a:visited {
 }
 
 .card {
-  border: 1px solid #ccc;
+  margin-top: 2rem;
+  border: 0.5px solid #cccccc37;
   padding: 1rem;
-  background: #f9f9f9;
+  background: #ffffff00;
+  border-radius: 4px;
 }
 
 .card .media {
@@ -77,12 +81,13 @@ a:visited {
   align-items: center;
   overflow: hidden;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .card .media img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit:cover;
 }
 
 .badge {
@@ -92,15 +97,18 @@ a:visited {
 }
 
 .badge.gold {
-  background: gold;
+  background: rgb(255, 217, 0);
+  color: #000000;
 }
 
 .badge.silver {
   background: silver;
+  color: #000000;
 }
 
 .badge.member {
   background: lightblue;
+  color: #000000;
 }
 
 /* Layout general */
@@ -116,12 +124,11 @@ a:visited {
 
 /* Header & Brand */
 .site-header {
-  background: #0b1224;
+  background: #00000020;
   color: #fff;
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 1000;
-  height: var(--header-h);
   display: flex;
   align-items: center;
 }
@@ -146,7 +153,7 @@ a:visited {
 .name {
   list-style: none;
   text-decoration: none;
-  color: #012a92;
+  color: #ebebeb;
   font-weight: 400;
   font-size: 30px;
   line-height: 1;
@@ -253,7 +260,6 @@ nav a[aria-current="page"] {
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
-
   opacity: 0;
   transform: translate(-50%, -40%);
   animation: heroFade 1.5s ease-out forwards;
@@ -275,7 +281,7 @@ nav a[aria-current="page"] {
   font-size: 2.8rem;
   margin-bottom: 4rem;
   text-shadow: 2px 2px 8px rgb(0, 0, 0);
-  background-color: rgba(250, 222, 112, 0.568);
+  background-color: rgba(4, 19, 40, 0.622);
   border-radius: 40px;
   padding: 30px;
 }
@@ -307,19 +313,21 @@ nav a[aria-current="page"] {
 .events h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #041823;
+  color: #ffffff;
 }
 
 .event-card {
   display: flex;
   flex-direction: column;
-  background: #fff;
+  background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  width: 80%;
+  margin:2rem auto;
 }
 
 .event-card:hover {
@@ -330,12 +338,13 @@ nav a[aria-current="page"] {
 .event-img {
   width: 100%;
   height: 240px;
-  object-fit: cover;
+  object-fit:contain;
 }
 
 .event-info {
   padding: 1.5rem;
   text-align: left;
+  color: #333;
 }
 
 .event-info h3 {
@@ -373,7 +382,7 @@ nav a[aria-current="page"] {
 }
 
 .view-all {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .view-all-btn {
@@ -417,31 +426,31 @@ nav a[aria-current="page"] {
   flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
-  background-color: rgb(6, 6, 6);
   padding-bottom: 3;
-
+  background-color: #03095867;
   width: 100%;
-  border-radius: 3rem;
-  box-shadow: 0 4px 15px rgba(194, 161, 161, 0.2);
-  border-color: 10px solid #ffffff9f;
+  max-width: 1100px;
+  border: 0.5px solid #fafafa3b;
+
 
 }
 
 .weather {
   margin-top: 2rem;
   text-align: center;
-  color: white;
+  color: rgb(255, 255, 255);
 
 }
 #current-temp{
   font-size: 2rem;
   font-weight: 700;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .weather .temp {
   font-weight: 700;
   font-size: 1.3rem;
   margin: .5rem 0;
+  color: rgb(255, 255, 255);
 }
 
 .forecast {
@@ -458,13 +467,13 @@ nav a[aria-current="page"] {
 }
 
 .forecast-day {
-  background: rgba(19, 1, 1, 0.414);
+  background: rgba(5, 16, 82, 0.814);
   padding: 1rem;
   border-radius: 10px;
-  border: 1px solid #f5f5f54b;
+  border: 0.5px solid #fafafa66;
   width: 90px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .forecast-day p {
@@ -478,7 +487,7 @@ nav a[aria-current="page"] {
 }
 
 .forecast h4 {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 
@@ -491,7 +500,7 @@ nav a[aria-current="page"] {
 /* ==== Spotlights container ==== */
 .spotlights {
   width: 100%;
-  max-width: 1100px;       /* ancho máximo del bloque */
+  max-width: 1100px;      
   margin: 4rem auto;
   padding: 1rem;
 }
@@ -500,7 +509,7 @@ nav a[aria-current="page"] {
 #spotlights-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* mínimo 280px por tarjeta */
-  gap: 2rem;       /* espacio entre cards */
+  gap: 1rem;       /* espacio entre cards */
 }
 
 /* ==== Cada tarjeta ==== */
@@ -508,10 +517,11 @@ nav a[aria-current="page"] {
   background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(254, 254, 254, 0.106);
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #ffffff;
 
   /* animación de aparición */
   opacity: 0;
@@ -569,3 +579,14 @@ nav a[aria-current="page"] {
   background-color: #005f86;
 }
 
+
+.spotlights-title{
+  margin-top: 8rem;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
