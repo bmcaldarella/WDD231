@@ -96,13 +96,38 @@
 }
 
 
-@media (max-width: 640px) {
 
-    #discover.layout-a,
-    #discover.layout-b,
-    #discover.layout-c {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8";
-    }
+
+/* ===== Desktop layouts (≥768px) ===== */
+@media (min-width: 768px){
+  #discover.layout-a{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "a1 a2 a3"
+      "a4 a5 a6"
+      "a7 a8 a8";
+  }
+  #discover.layout-b{
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas:
+      "a1 a2 a3"
+      "a1 a4 a5"
+      "a1 a6 a7"
+      "a1 a8 a8";
+  }
+  #discover.layout-c{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "a1 a2 a3 a4"
+      "a5 a6 a7 a8";
+  }
+
+  /* Hover solo en pantallas grandes */
+  .card img{ transition: transform .3s ease-in-out; }
+  .card img:hover{ transform: scale(1.05); cursor:pointer; }
+}
+
+/* ===== Extra ancho (mejora legibilidad y respiro) ===== */
+@media (min-width: 1200px){
+  #discover{ gap: 1.25rem; }
 }
