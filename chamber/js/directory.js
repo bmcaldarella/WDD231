@@ -41,13 +41,11 @@ if (toggle && nav) {
   syncNav(); 
 }
 
-// ===== Footer dinámico =====
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 const lmEl = document.getElementById("lastModified");
 if (lmEl) lmEl.textContent = document.lastModified;
 
-// ===== Directory grid/list toggle =====
 const directoryEl = document.getElementById("directory");
 const btnGrid = document.getElementById("btnGrid");
 const btnList = document.getElementById("btnList");
@@ -64,11 +62,9 @@ if (btnGrid) btnGrid.addEventListener("click", () => setView("grid"));
 if (btnList) btnList.addEventListener("click", () => setView("list"));
 if (directoryEl) setView("grid"); // default view
 
-// ===== Load and render members =====
 const DATA_URL = "./data/members.json";
 
 function buildResponsiveSrc(imagePath) {
-  // For now just use the given path (no -216 suffix to avoid 404)
   return { src: imagePath, srcset: "", sizes: "" };
 }
 
@@ -155,11 +151,9 @@ function renderMembers(members) {
 }
 
 
-// Usa tu mismo archivo de miembros
 const SPOTLIGHTS_URL = "./data/members.json";
 const spotlightsList = document.getElementById("spotlights-list");
 
-// sample aleatorio sin repetir
 function getRandomSample(arr, n = 3) {
   const copy = [...arr];
   for (let i = copy.length - 1; i > 0; i--) {
@@ -193,7 +187,6 @@ function renderSpotlights(items) {
     const info = document.createElement("div");
     info.className = "spotlight-info";
 
-    // Nombre
     const h3 = document.createElement("h3");
     h3.textContent = m.name;
 
@@ -201,25 +194,23 @@ function renderSpotlights(items) {
     const summary = document.createElement("p");
     summary.textContent = m.category ? `${m.category} — ${m.address}` : m.address;
 
-    // Teléfono (clickeable)
     const phone = document.createElement("p");
     if (m.phone) {
       const phoneLink = document.createElement("a");
       phoneLink.href = `tel:${String(m.phone).replace(/\s+/g, "")}`;
       phoneLink.textContent = m.phone;
-      phoneLink.style.color = "#0077b6"; // color tipo link
+      phoneLink.style.color = "#0077b6"; 
       phoneLink.style.fontWeight = "600";
       phone.appendChild(phoneLink);
     }
 
-    // Website (texto link normal, sin botón)
     const site = document.createElement("p");
     if (m.website) {
       const siteLink = document.createElement("a");
       siteLink.href = m.website;
       siteLink.target = "_blank";
       siteLink.rel = "noopener";
-      siteLink.textContent = m.website.replace(/^https?:\/\//, ""); // muestra sin https://
+      siteLink.textContent = m.website.replace(/^https?:\/\//, ""); 
       siteLink.style.color = "#0077b6";
       site.appendChild(siteLink);
     }
@@ -233,7 +224,6 @@ function renderSpotlights(items) {
     badge.className = `badge ${badgeClass}`;
     badge.textContent = badgeText;
 
-    // === Armado final ===
     info.append(h3, summary, phone, site, badge);
     card.append(img, info);
     spotlightsList.appendChild(card);
@@ -298,12 +288,6 @@ function getRandomSample(arr, n = 3) {
             });
 
             // Optional: block submit if invalid and show native report
-            document.getElementById('join-form').addEventListener('submit', function (e) {
-                if (!this.checkValidity()) {
-                    e.preventDefault();
-                    this.reportValidity();
-                }
-            });
         });
 
 

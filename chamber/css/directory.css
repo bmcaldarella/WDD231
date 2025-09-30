@@ -54,6 +54,19 @@
     width: 100%;
     max-width: none;
   }
+
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card img:hover{
+    cursor: pointer;
+}
+
 }
 
 
@@ -69,4 +82,27 @@
 
 
   
+}
+
+@media (min-width: 768px) {
+    .card img {
+        transition: transform .3s ease-in-out;
+    }
+
+    .card img:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+}
+
+
+@media (max-width: 640px) {
+
+    #discover.layout-a,
+    #discover.layout-b,
+    #discover.layout-c {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8";
+    }
 }
