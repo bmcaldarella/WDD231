@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Peruvian Flavors — Site Plan (WDD 231)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Brandon Caldarella" />
+    <meta name="description"
+        content="Site plan for the WDD 231 individual project: Peruvian Flavors. Purpose, scenarios, color schema, typography, and homepage wireframes." />
+        <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <span class="tag">WDD 231</span>
+            <h1>Peruvian Flavors — Site Plan</h1>
+            <p class="note">Individual project (3 pages) — Pure HTML, CSS, and JavaScript. This document defines the
+                name, purpose, scenarios, colors, typography, and wireframes of the homepage.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Site Name -->
+        <section class="card" aria-labelledby="site-name">
+            <h2 id="site-name">Site Name</h2>
+            <p><strong>Peruvian Flavors</strong></p>
+            <p class="note">A short, clear, and memorable name that directly communicates the website’s purpose:
+                Peruvian recipes and food culture.</p>
+            <p class="small"><em>Domain:</em>peruvianflavours.com.</p>
+        </section>
+
+        <!-- Site Purpose -->
+        <section class="card" aria-labelledby="site-purpose">
+            <h2 id="site-purpose">Site Purpose</h2>
+            <p>This three–page website is designed to help users discover, learn, and save authentic Peruvian recipes.
+                The <em>Recipes</em> page will showcase at least 15 dishes with details like name, cooking time,
+                difficulty, and category,
+                loaded from a local JSON file (with the option to expand using a public API).
+                The <em>Cookbook</em> page will let users save their favorite recipes using <code
+                    class="kbd">localStorage</code>.
+                An <strong>accessible modal</strong> will also be included to display ingredients and step-by-step
+                instructions.</p>
+        </section>
+
+        <!-- Scenarios -->
+        <section class="card" aria-labelledby="scenarios">
+            <h2 id="scenarios">Scenarios</h2>
+            <ul>
+                <li>“I want to learn how to make Ceviche, Ají de Gallina, and Lomo Saltado with clear steps and photos.”
+                </li>
+                <li>“Where can I save my favorite recipes so I can find them quickly later?”</li>
+                <li>“How can I explore traditional Peruvian dishes and their cultural background?”</li>
+                <li>“Can I filter recipes by ingredients I already have at home?”</li>
+                <li>“I’d like to share a Peruvian recipe with my friends—what’s the easiest way?”</li>
+            </ul>
+        </section>
+
+        <!-- Color Schema -->
+        <section class="card" aria-labelledby="color-schema">
+            <h2 id="color-schema">Color Scheme</h2>
+            <div class="grid cols-3" role="list">
+                <div class="swatch" role="listitem">
+                    <div class="color" style="background: #FFFFFF"></div>
+                    <div class="meta"><strong>Background</strong><br>#FFFFFF — Page background.</div>
+                </div>
+                <div class="swatch" role="listitem">
+                    <div class="color" style="background: #000000"></div>
+                    <div class="meta"><strong>Main Headings</strong><br>#000000 — Primary titles.</div>
+                </div>
+                <div class="swatch" role="listitem">
+                    <div class="color" style="background: #666666"></div>
+                    <div class="meta"><strong>Secondary Headings</strong><br>#666666 — Subtitles and secondary text.
+                    </div>
+                </div>
+                <div class="swatch" role="listitem">
+                    <div class="color" style="background: #D7263D"></div>
+                    <div class="meta"><strong>Buttons</strong><br>#D7263D — Buttons and key accents.</div>
+                </div>
+                <div class="swatch" role="listitem">
+                    <div class="color" style="background: #FFFFFF"></div>
+                    <div class="meta"><strong>Button Text</strong><br>#FFFFFF — Text inside buttons.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography -->
+        <section class="card" aria-labelledby="typography">
+            <h2 id="typography">Typography</h2>
+            <div class="grid cols-2">
+                <div>
+                    <h3>Headings — Roboto</h3>
+                    <p class="note">Usage: H1–H3, section titles, hero text.</p>
+                </div>
+                <div>
+                    <h3>Body — Roboto</h3>
+                    <p class="note">Usage: paragraphs, navigation, buttons, cards.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wireframes -->
+        <section class="card" aria-labelledby="wireframes">
+            <h2 id="wireframes">Wireframe — Home Page</h2>
+
+            <!-- Mobile Wireframe -->
+            <h3>Mobile</h3>
+            <div class="wireframe" role="img" aria-label="Mobile Home Wireframe">
+                <svg viewBox="0 0 360 640" width="100%" height="auto" aria-hidden="true">
+                    <!-- Header -->
+                    <rect x="0" y="0" width="360" height="56" fill="#ffffff" stroke="#cccccc" />
+                    <text x="12" y="34" font-size="14" fill="#444">Logo</text>
+                    <rect x="300" y="16" width="44" height="24" fill="#eeeeee" stroke="#cccccc" />
+                    <text x="306" y="32" font-size="12" fill="#666">☰</text>
+
+                    <!-- Hero -->
+                    <rect x="12" y="72" width="336" height="140" fill="#f2f2f2" stroke="#cccccc" />
+                    <text x="24" y="112" font-size="14" fill="#666">Hero image</text>
+
+                    <!-- Intro -->
+                    <rect x="12" y="224" width="336" height="80" fill="#fff" stroke="#cccccc" />
+                    <text x="24" y="250" font-size="12" fill="#666">Intro: Peruvian cuisine</text>
+
+                    <!-- Featured Cards -->
+                    <rect x="12" y="316" width="336" height="84" fill="#f8f8f8" stroke="#cccccc" />
+                    <rect x="12" y="408" width="336" height="84" fill="#f8f8f8" stroke="#cccccc" />
+                    <rect x="12" y="500" width="336" height="84" fill="#f8f8f8" stroke="#cccccc" />
+                    <text x="24" y="366" font-size="12" fill="#666">Featured recipe</text>
+
+                    <!-- Footer -->
+                    <rect x="0" y="596" width="360" height="44" fill="#ffffff" stroke="#cccccc" />
+                    <text x="12" y="622" font-size="12" fill="#666">Footer (links, video)</text>
+                </svg>
+            </div>
+
+            <!-- Desktop Wireframe -->
+            <h3>Desktop</h3>
+            <div class="wireframe" role="img" aria-label="Desktop Home Wireframe">
+                <svg viewBox="0 0 960 540" width="100%" height="auto" aria-hidden="true">
+                    <!-- Header -->
+                    <rect x="0" y="0" width="960" height="72" fill="#ffffff" stroke="#cccccc" />
+                    <text x="24" y="44" font-size="16" fill="#444">Logo</text>
+                    <rect x="720" y="18" width="216" height="36" fill="#eeeeee" stroke="#cccccc" />
+                    <text x="728" y="42" font-size="12" fill="#666">Nav: Home | Recipes | Cookbook</text>
+
+                    <!-- Hero -->
+                    <rect x="24" y="96" width="912" height="180" fill="#f2f2f2" stroke="#cccccc" />
+                    <text x="36" y="188" font-size="14" fill="#666">Hero image + tagline</text>
+
+                    <!-- Intro + Featured grid 3 cols -->
+                    <rect x="24" y="288" width="288" height="144" fill="#fff" stroke="#cccccc" />
+                    <text x="36" y="340" font-size="12" fill="#666">Intro: 2–3 paragraphs</text>
+
+                    <rect x="336" y="288" width="192" height="144" fill="#f8f8f8" stroke="#cccccc" />
+                    <rect x="540" y="288" width="192" height="144" fill="#f8f8f8" stroke="#cccccc" />
+                    <rect x="744" y="288" width="192" height="144" fill="#f8f8f8" stroke="#cccccc" />
+                    <text x="348" y="360" font-size="12" fill="#666">Featured 1</text>
+
+                    <!-- Footer -->
+                    <rect x="0" y="468" width="960" height="72" fill="#ffffff" stroke="#cccccc" />
+                    <text x="24" y="510" font-size="12" fill="#666">Footer (links, credits, video link)</text>
+                </svg>
+            </div>
+        </section>
+
+        <section class="card" aria-labelledby="css-note">
+            <h2 id="css-note">CSS</h2>
+            <p>The final site will use valid CSS with no unnecessary duplicates. Visual consistency will be maintained
+                (proximity, alignment, repetition, contrast, and spacing). Responsive navigation: hamburger menu on
+                mobile,
+                horizontal navigation on desktop. Layout will avoid horizontal scrolling from 320&nbsp;px and up.
+                Page weight &lt; 500&nbsp;kB.</p>
+        </section>
+
+        <!-- Testing -->
+        <section class="card" aria-labelledby="testing">
+            <h2 id="testing">Testing & Self-Check</h2>
+            <ul>
+                <li>Validate HTML/CSS and ensure there are no console errors in DevTools.</li>
+                <li>Contrast check with <em>CSS Overview</em>. Visible :focus states.</li>
+                <li>Lighthouse (mobile/desktop): Accessibility, Best Practices, SEO, Performance.</li>
+                <li>Testing across multiple browsers/devices (Chrome, Firefox, Safari; iOS/Android).</li>
+                <li>GitHub Pages enabled with accessible link; footer will include a link to the video (when ready).
+                </li>
+            </ul>
+        </section>
+
+    </main>
+</body>
+
+</html>
