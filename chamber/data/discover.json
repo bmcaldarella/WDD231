@@ -1,0 +1,69 @@
+[
+  {
+    "id": "english-market",
+    "name": "The English Market",
+    "image": "./images/discover/market.webp",
+    "address": "Princes Street, Cork City, Ireland",
+    "description": "A historic indoor food market operating since 1788, known for its fresh produce, meats, and traditional Irish foods.",
+    "url": "https://www.corkcity.ie/en/things-to-do/attractions/the-english-market/"
+  },
+  {
+    "id": "cork-city-gaol",
+    "name": "Cork City Gaol Museum",
+    "image": "./images/discover/museum.webp",
+    "address": "Convent Avenue, Sunday's Well, Cork, Ireland",
+    "description": "A 19th-century prison turned museum, offering a fascinating glimpse into Cork’s past with lifelike figures and exhibitions.",
+    "url": "https://www.corkcitygaol.com/"
+  },
+  {
+    "id": "elizabeth-fort",
+    "name": "Elizabeth Fort",
+    "image": "./images/discover/elizabeth_1.webp",
+    "address": "Barrack Street, Cork City, Ireland",
+    "description": "A 17th-century star-shaped fort with panoramic views of the city and free entry to explore Cork’s military history.",
+    "url": "https://elizabethfort.ie/"
+  },
+  {
+    "id": "st-finbarres-cathedral",
+    "name": "St. Fin Barre’s Cathedral",
+    "image": "./images/discover/church.webp",
+    "address": "Bishop Street, Cork City, Ireland",
+    "description": "A striking Gothic Revival cathedral completed in 1879, famous for its ornate stone carvings, spires, and stained glass.",
+    "url": "https://corkcathedral.webs.com/"
+  },
+  {
+    "id": "blackrock-castle",
+    "name": "Blackrock Castle",
+    "image": "./images/discover/castle.webp",
+    "address": "Castle Road, Blackrock, Cork, Ireland",
+    "description": "A riverside castle built in the 16th century, now home to a science centre, observatory, and popular café.",
+    "url": "https://www.bco.ie/"
+  },
+  {
+    "id": "fota-wildlife",
+    "name": "Fota Wildlife Park",
+    "image": "./images/discover/fota.webp",
+    "address": "Carrigtwohill, County Cork, Ireland",
+    "description": "A family-friendly wildlife park where animals roam in open spaces, featuring giraffes, cheetahs, and monkeys close to their natural habitat.",
+    "url": "https://www.fotawildlife.ie/"
+  },
+  {
+  "id": "shandon-bells",
+  "name": "Shandon Bells",
+  "image": "./images/discover/shandon.webp",
+  "address": "Church Street, Shandon, Cork City, Ireland",
+  "description": "Climb the historic tower, ring the famous bells, and enjoy panoramic views over Cork’s skyline.",
+  "url": "https://www.shandonbells.ie/"
+},
+{
+  "id": "fitzgeralds-park",
+  "name": "Fitzgerald’s Park",
+  "image": "./images/discover/park.webp",
+  "address": "Mardyke Walk, Cork City, Ireland",
+  "description": "Riverside park with gardens, sculptures, a playground, and seasonal events—right beside Cork Public Museum.",
+  "url": "https://www.corkcity.ie/en/things-to-do/attractions/fitzgeralds-park/"
+}
+
+
+  
+]
